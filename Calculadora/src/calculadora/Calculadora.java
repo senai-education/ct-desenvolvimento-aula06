@@ -40,11 +40,7 @@ public class Calculadora {
         }while(!opcao.equals("0"));
         System.out.println("XAUUUUUUUU");
     }
-    
-    public double chama(IOperacaoMatematica operacao, double valorUm, double valorDois) {
-        return operacao.calcula(valorUm, valorDois);
-    }
-    
+   
     public void chamaFuncoes(String valor, double valorUm, double valorDois){
         switch(valor){
             case "1":
@@ -76,10 +72,13 @@ public class Calculadora {
                 System.out.println("ESSA NÃO É UM OPÇÃO VÁLIDA!! TENTE OUTRA!");
         }
     }
+    
+    public double chama(IOperacaoMatematica operacao, double valorUm, double valorDois) {
+        return operacao.calcula(valorUm, valorDois);
+    }
 
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
         calc.mostraMenu();
     }
-    
 }
